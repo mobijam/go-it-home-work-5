@@ -254,11 +254,12 @@ nav {
 }
 
 /* Кнопка заказа */
-.button {
-  display: inline-block;
+.order {
   padding: 10px 32px;
   min-width: 200px;
+
   border: 1px solid transparent;
+  border-radius: 4px;
 
   color: var(--page-hero-text);
   background-color: var(--main-accent);
@@ -268,7 +269,6 @@ nav {
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-decoration: none;
-  border-radius: 4px;
 }
 
 /* Основной контент */
