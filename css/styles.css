@@ -24,6 +24,8 @@
 
 /* Шрифты  и главный фон страницы*/
 body {
+  padding-top: 80px;
+
   background-color: var(--primary-bg);
 
   font-family: 'Roboto', sans-serif;
@@ -54,13 +56,18 @@ img {
 
 /* Шапка сайта */
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   
+  min-height: 80px;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 25px;
 
   background-color: var(--primary-bg);
   border: 1px solid #ececec;
-    
+  z-index: 1;
 }
 
 .header-menu {
@@ -109,6 +116,8 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-bar > li {
@@ -119,7 +128,7 @@ nav {
   margin-right: 0px;
 }
 
-.link::after {
+.current::after {
   content: '';
 
   position: absolute;
@@ -132,16 +141,6 @@ nav {
   border-radius: 2px;
 
   background-color: var(--main-accent);
-
-  opacity: 0;
-  transform: scaleX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover::after,
-.link:focus::after {
-  opacity: 1;
-  transform: scaleX(1);
 }
 
 .link:hover,
@@ -179,13 +178,12 @@ nav {
   letter-spacing: 0.02em;
   text-decoration: none;
 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-contacts:hover,
 .studio-contacts:focus {
   color: var(--main-accent);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-envelope {
@@ -507,19 +505,21 @@ nav {
   border-radius: 50%;
 
   fill: var(--link-icons);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer > a {
   background-color: var(--footer-links-bg);
   fill: var(--page-hero-text);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon a:hover,
 .icon a:focus {
   background-color: var(--main-accent);
   fill: var(--page-hero-text);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Секция клиентов */
@@ -567,14 +567,14 @@ nav {
 
   border: 1px solid var(--link-icons);
   border-radius: 4px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--main-accent);
   border: 1px solid var(--main-accent);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Подвал сайта */
@@ -720,6 +720,8 @@ nav {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn {
@@ -735,7 +737,6 @@ nav {
   color: var(--page-hero-text);
   background-color: var(--main-accent);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list {
@@ -788,13 +789,12 @@ nav {
 
   transform: translateY(100%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-item:hover,
 .work-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-item:hover .overlay,
