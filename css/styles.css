@@ -67,7 +67,7 @@ img {
 
   background-color: var(--primary-bg);
   border: 1px solid #ececec;
-  z-index: 1;
+  z-index: 999;
 }
 
 .header-menu {
